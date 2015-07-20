@@ -62,6 +62,7 @@ inoreabbrev h3, <h3>%</h3><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev h4, <h4>%</h4><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev h5, <h5>%</h5><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev div, <div>%</div><Esc>F%s<c-o>:call getchar()<CR>
+inoreabbrev span, <span>%</span><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev li, <li>%</li><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev td, <td>%</td><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev br, <br/>
