@@ -1,8 +1,4 @@
 "tay run :so% to source vimrc
-<<<<<<< HEAD
-"this is for git change
-=======
->>>>>>> 52e654d377e4e105f6f163be939a604d6e75a202
 colorscheme darkblue
 syntax on
 
