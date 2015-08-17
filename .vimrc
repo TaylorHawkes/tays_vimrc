@@ -3,8 +3,15 @@ set runtimepath+=~/.vim
 ""source ~/.vim/vimrcs/basic.vim
 ""source ~/.vim/vimrcs/filetypes.vim
 source ~/.vim/vimrcs/plugins_config.vim
-source ~/.vim/vimrcs/extended.vim
+"source ~/.vim/vimrcs/extended.vim
 
+""
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+""let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = 'git ls-files %s'
+"let g:ctrlp_user_command = 'find -type f'
 
 
 "tay run :so% to source vimrc
@@ -74,6 +81,7 @@ inoreabbrev div, <div>%</div><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev span, <span>%</span><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev li, <li>%</li><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev td, <td>%</td><Esc>F%s<c-o>:call getchar()<CR>
+inoreabbrev th, <th>%</th><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev br, <br/>
 
 inoreabbrev textarea, <textarea>%</textarea><Esc>F%s<c-o>:call getchar()<CR>
