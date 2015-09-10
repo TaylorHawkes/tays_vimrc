@@ -123,6 +123,11 @@ inoreabbrev pfunc, public function %(){<cr>}<ESC>ko<ESC>kf%s<c-o>:call getchar()
 inoreabbrev ready, $(document).ready(function(){<cr>});<ESC>ko
 inoreabbrev jq, $('%').on('asdf','asdf',function(){<CR>});<Esc>kf%s<c-o>:call getchar()<CR>
 
+nnoremap <silent><leader>,pfd :call PhpCsFixerFixDirectory()<CR>
+nnoremap <silent><leader>pff :call PhpCsFixerFixFile()<CR>
+
+
+
 
 "spelling corrections"
 inoreabbrev marign margin
