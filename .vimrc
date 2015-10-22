@@ -57,6 +57,11 @@ map <leader>pp :setlocal paste!<cr>
 map <leader>ff :call FixChars()<cr>
 
 
+map <leader>hh :%!xxd<cr>
+map <leader>hho :%!xxd -r<cr>
+
+
+
 "inoremap div -- <cr><div><cr>steve@stevelosh.com
 "inoremap ssig -- <cr>Steve Losh<cr>steve@stevelosh.com
 
@@ -125,6 +130,8 @@ inoreabbrev jq, $('%').on('asdf','asdf',function(){<CR>});<Esc>kf%s<c-o>:call ge
 
 nnoremap <silent><leader>,pfd :call PhpCsFixerFixDirectory()<CR>
 nnoremap <silent><leader>pff :call PhpCsFixerFixFile()<CR>
+vmap <C-c> :w !ccc<CR><CR>
+
 
 
 
