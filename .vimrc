@@ -147,27 +147,29 @@ inoreabbrev magin margin
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>ko
+""inoremap { {}<Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 
-vnoremap li <Esc>:call GetVisualSelection("li") <CR>
-vnoremap a <Esc>:call GetVisualSelection("a") <CR>
+vnoremap li <Esc>:call GetVisualSelection("<li>","</li>") <CR>
+vnoremap a <Esc>:call GetVisualSelection("<a>","</a>") <CR>
+vnoremap " <Esc>:call GetVisualSelection('"','"') <CR>
+vnoremap ' <Esc>:call GetVisualSelection("'","'") <CR>
+
 
 "function for wrapping"
-function! GetVisualSelection(surround)
-
-
+function! GetVisualSelection(surround_start,surround_finish)
   " Why is this not a built-in Vim script function?!
  let [lnum1, col1] = getpos("'<")[1:2]
  let [lnum2, col2] = getpos("'>")[1:2]
-
-
   let lines = getline(lnum1, lnum2)
  "  let lines[-1] = lines[-1][: col2 - (&selection == 'inclusive' ? 1 : 2)]
     ""  let lines[0] = lines[0][col1 - 1:]
-    for n in lines
-      execute "normal o<".a:surround.">".Trim(n)."</".a:surround.">\<Esc>" 
-    endfor
+    execute "set paste"
+        for n in lines
+              execute "normal o".a:surround_start.Trim(n).a:surround_finish."\<Esc>" 
+        endfor
+   execute "set nopaste"
 
   execute  lnum1.",".lnum2." d"
 
@@ -176,6 +178,7 @@ endfunction
 function! Trim(input_string)
     return substitute(a:input_string, '^\s*\(.\{-}\)\s*$', '\1', '')
 endfunction
+
 
 
 function! FixChars() 
