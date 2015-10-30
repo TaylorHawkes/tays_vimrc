@@ -103,6 +103,8 @@ inoreabbrev sript, <script type="text/javascript" src="%"></script><Esc>F%s<c-o>
 inoreabbrev sritp, <script type="text/javascript" src="%"></script><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev srip, <script type="text/javascript" src="%"></script><Esc>F%s<c-o>:call getchar()<CR>
 inoreabbrev scrip, <script type="text/javascript" src="%"></script><Esc>F%s<c-o>:call getchar()<CR>
+inoreabbrev con, console.log(%)<Esc>F%s<c-o>:call getchar()<CR>
+
 
 
 "php abreviations
