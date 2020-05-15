@@ -1,4 +1,1 @@
-# tays_vimrc
-#clone repo into ~/.vim
-# link
-#ln -s ~/.vim/.vimrc ~/.vimrc
+git clone https://github.com/TaylorHawkes/tays_vimrc.git ~/.vim  && ln -s ~/.vim/.vimrc ~/.vimrc
